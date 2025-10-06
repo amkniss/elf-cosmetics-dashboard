@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/elf-cosmetics-dashboard/',
+  base: process.env.VERCEL ? '/' : '/elf-cosmetics-dashboard/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
