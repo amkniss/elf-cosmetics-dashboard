@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e.l.f. Cosmetics: Strategic Analysis Dashboard</title>
+    <meta name="description" content="Interactive strategic analysis dashboard for e.l.f. Cosmetics featuring competitive insights, consumer intelligence, and market opportunities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <header class="bg-stone-50/80 backdrop-blur-lg sticky top-0 z-50 border-b border-stone-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-black text-2xl text-stone-800">e.l.f.</span>
+                    <span class="font-semibold text-xl text-stone-600 ml-2">Analysis</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#summary" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-600">Summary</a>
+                        <a href="#competitive" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-600">Competitive</a>
+                        <a href="#consumer" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-600">Consumer</a>
+                        <a href="#opportunities" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-600">Opportunities</a>
+                        <a href="#recommendations" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-600">Recommendations</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <select id="mobile-nav" class="block w-full rounded-md border-stone-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm">
+                        <option value="#summary">Summary</option>
+                        <option value="#competitive">Competitive</option>
+                        <option value="#consumer">Consumer</option>
+                        <option value="#opportunities">Opportunities</option>
+                        <option value="#recommendations">Recommendations</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <!-- Executive Summary Section -->
+        <section id="summary" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">Executive Summary</h2>
+            <p class="text-stone-600 mb-8 max-w-3xl">This section provides a high-level overview of e.l.f. Cosmetics' current market position, highlighting key performance indicators and strategic imperatives. It serves as a snapshot for quick strategic assessment before diving deeper into competitive, consumer, and opportunity analyses.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stone-card metric-card rounded-lg p-6 text-center cursor-pointer" data-scroll-to="#competitive">
+                    <h3 class="text-lg font-semibold text-stone-700 mb-2">Market Share</h3>
+                    <p class="text-4xl font-bold metric-value">9.5%</p>
+                    <p class="text-sm text-stone-500 mt-2">in mass cosmetics category</p>
+                </div>
+                <div class="stone-card metric-card rounded-lg p-6 text-center cursor-pointer" data-scroll-to="#competitive">
+                    <h3 class="text-lg font-semibold text-stone-700 mb-2">Brand Perception</h3>
+                    <p class="text-4xl font-bold metric-value">88</p>
+                    <p class="text-sm text-stone-500 mt-2">Net Sentiment Score / 100</p>
+                </div>
+                <div class="stone-card metric-card rounded-lg p-6 text-center cursor-pointer" data-scroll-to="#recommendations">
+                    <h3 class="text-lg font-semibold text-stone-700 mb-2">Avg. CAC</h3>
+                    <p class="text-4xl font-bold metric-value">$7.50</p>
+                    <p class="text-sm text-stone-500 mt-2">Target: &lt; $6.00</p>
+                </div>
+                <div class="stone-card metric-card rounded-lg p-6 text-center cursor-pointer" data-scroll-to="#competitive">
+                    <h3 class="text-lg font-semibold text-stone-700 mb-2">Digital Engagement</h3>
+                    <p class="text-4xl font-bold metric-value">4.2%</p>
+                    <p class="text-sm text-stone-500 mt-2">Avg. cross-platform rate</p>
+                </div>
+                <div class="stone-card rounded-lg p-6 md:col-span-2 lg:col-span-4">
+                    <h3 class="text-lg font-semibold text-center text-stone-700 mb-4">Market Share Breakdown</h3>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitive Landscape Section -->
+        <section id="competitive" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">Competitive Landscape</h2>
+            <p class="text-stone-600 mb-8 max-w-3xl">Here, we benchmark e.l.f. against key direct competitors: NYX, Colourpop, and Glossier. The interactive charts below allow for a dynamic comparison across several critical business and brand metrics, revealing relative strengths and weaknesses in the marketplace.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="stone-card rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-center text-stone-700 mb-4">Brand Attribute Comparison</h3>
+                    <div class="chart-container h-[400px] md:h-[450px]">
+                        <canvas id="competitorRadarChart"></canvas>
+                    </div>
+                </div>
+                <div class="stone-card rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-center text-stone-700 mb-4">Performance Metrics</h3>
+                    <div class="flex justify-center mb-4 space-x-2">
+                        <button class="metric-button active-btn px-4 py-2 text-sm rounded-full" data-metric="social">Social Reach</button>
+                        <button class="metric-button px-4 py-2 text-sm rounded-full" data-metric="sentiment">Sentiment</button>
+                        <button class="metric-button px-4 py-2 text-sm rounded-full" data-metric="price">Price Index</button>
+                    </div>
+                    <div class="chart-container h-[340px] md:h-[390px]">
+                        <canvas id="competitorBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumer Insights Section -->
+        <section id="consumer" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">Consumer Insights</h2>
+            <p class="text-stone-600 mb-8 max-w-3xl">Understanding the customer is paramount. This section distills thousands of data points from social media, reviews, and forums into the most pressing consumer questions and trending topics. Interacting with these elements reveals the unmet needs and desires of the modern beauty consumer.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2 stone-card rounded-lg p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-semibold text-stone-700">Trending Topics</h3>
+                        <button id="clear-filter-btn" class="text-xs text-stone-500 hover:text-pink-600 hidden">Clear Filter</button>
+                    </div>
+                    <div id="word-cloud" class="flex flex-wrap justify-center items-center gap-3"></div>
+                </div>
+                <div class="lg:col-span-3">
+                    <h3 class="text-xl font-semibold text-stone-700 mb-4">Top Consumer Questions</h3>
+                    <div id="faq-accordion" class="space-y-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Opportunities Section -->
+        <section id="opportunities" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">Market Opportunities</h2>
+            <p class="text-stone-600 mb-8 max-w-3xl">This analysis identifies untapped market segments and product innovation avenues. The bubble chart below visualizes potential opportunities, plotting them based on potential market impact versus the estimated development effort required, guiding strategic prioritization.</p>
+            <div class="stone-card rounded-lg p-6">
+                <div class="chart-container mx-auto h-[400px] md:h-[500px] max-w-4xl">
+                    <canvas id="opportunityBubbleChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Recommendations Section -->
+        <section id="recommendations" class="scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">Strategic Recommendations</h2>
+            <p class="text-stone-600 mb-8 max-w-3xl">Based on the comprehensive analysis, the following are actionable strategies designed to address e.l.f.'s key business objectives: reducing customer acquisition costs, enhancing brand perception, and expanding market share. These recommendations are tailored to leverage strengths and mitigate weaknesses.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stone-card rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-stone-800">Reduce CAC</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Double Down on TikTok</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Launch a user-generated content (UGC) challenge focused on product "dupes" to drive organic reach and reduce paid ad spend. Track #elfdupechallenge.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Optimize Referral Program</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Increase incentive from 10% to 15% for both referrer and new customer in the "Beauty Squad" loyalty program to boost word-of-mouth acquisition.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Leverage SEO for "Dupe" Searches</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Create targeted blog content and product pages that rank for high-intent keywords like "[Luxury Brand] alternative" or "best affordable [product type]".
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stone-card rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-stone-800">Enhance Brand Perception</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>"Eyes. Lips. Face. Science."</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Launch a marketing campaign highlighting the high-quality ingredients (e.g., niacinamide, hyaluronic acid) and formulation science behind the affordable price point.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Invest in Sustainable Packaging</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Introduce a pilot program for refillable packaging on a hero product like the Power Grip Primer to appeal to eco-conscious consumers and generate positive PR.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>High-Profile Collab</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Partner with a respected, science-focused skincare influencer (e.g., a dermatologist on YouTube) to validate product efficacy and reach a more discerning audience.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stone-card rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-stone-800">Expand Market Share</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Launch Hybrid Line</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Develop a new product line of skincare-makeup hybrids (e.g., tinted serums, SPF-infused primers) to capture the demand for multi-functional products.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Target Gen X "Ageless Beauty"</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Create a marketing campaign for consumers 40+ focusing on simple, effective, affordable routines, using age-appropriate influencers and platforms like Facebook and Instagram.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <button class="recommendation-toggle w-full text-left p-3 bg-stone-100 rounded-md font-semibold flex justify-between items-center">
+                                <span>Expand International Shipping</span>
+                                <span class="icon font-light text-xl">+</span>
+                            </button>
+                            <div class="recommendation-content hidden mt-2 p-3 bg-white rounded-md text-stone-600 border border-stone-200">
+                                Prioritize expansion into high-growth markets like Southeast Asia and Latin America through localized e-commerce sites and partnerships with regional distributors.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

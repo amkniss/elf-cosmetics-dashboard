@@ -1,16 +1,50 @@
-e.l.f. Cosmetics - Interactive Strategic Dashboard
-This project is a single-page interactive web application that presents a comprehensive strategic analysis of e.l.f. Cosmetics. It transforms a traditional business report into an intuitive and explorable dashboard.
+# e.l.f. Cosmetics Strategic Analysis Dashboard
 
-Features
-Interactive Charts: Data visualizations for market share, competitive analysis, and market opportunities powered by Chart.js.
+A comprehensive, interactive dashboard showcasing strategic insights and competitive analysis for e.l.f. Cosmetics. Built for professional presentation and business intelligence.
 
-Dynamic Filtering: Users can filter consumer questions by trending topics to explore specific areas of interest.
+## 🎯 Features
 
-Responsive Design: The dashboard is fully responsive and accessible on desktop, tablet, and mobile devices using Tailwind CSS.
+- **Interactive Charts**: Dynamic visualizations using Chart.js
+- **Mobile Responsive**: Optimized for all devices
+- **Professional Design**: Clean, modern interface with e.l.f. brand colors
+- **Strategic Insights**: Comprehensive competitive analysis and market opportunities
+- **Consumer Intelligence**: Interactive word cloud and FAQ system
 
-Actionable Insights: Strategic recommendations are organized into expandable cards for clarity and ease of use.
+## 📊 Dashboard Sections
 
-Objective
-The application is designed to make the key findings of the market research easily consumable. It allows users to explore the competitive landscape, understand consumer pain points, identify market opportunities, and review actionable, data-driven recommendations in a dynamic format.
+1. **Executive Summary** - Key metrics and market share
+2. **Competitive Landscape** - Interactive radar charts comparing e.l.f. vs competitors
+3. **Consumer Insights** - Trending topics and consumer questions
+4. **Market Opportunities** - Impact vs effort analysis
+5. **Strategic Recommendations** - Actionable strategies for growth
 
-This project was built using HTML, Tailwind CSS, and vanilla JavaScript with Chart.js.
+## 🚀 Live Demo
+
+[View Live Dashboard](https://your-username.github.io/elf-cosmetics-dashboard)
+
+## 🛠 Technical Stack
+
+- HTML5 & CSS3
+- Tailwind CSS for styling
+- Chart.js for interactive visualizations
+- Vanilla JavaScript for interactivity
+- Responsive design principles
+
+## 📈 Key Insights
+
+- **Market Share**: 9.5% in mass cosmetics category
+- **Brand Perception**: 88/100 Net Sentiment Score
+- **Customer Acquisition Cost**: $7.50 (Target: <$6.00)
+- **Digital Engagement**: 4.2% cross-platform rate
+
+## 🎨 Design Philosophy
+
+The dashboard uses a warm neutral palette with pink accents that reflect e.l.f.'s brand identity. The design prioritizes clarity and professional presentation while maintaining interactive engagement.
+
+## 📱 Mobile Optimization
+
+Fully responsive design that works seamlessly across desktop, tablet, and mobile devices with touch-friendly interactions.
+
+---
+
+*Built for strategic business intelligence and professional presentation*

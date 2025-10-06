@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+@layer base {
+  body {
+    @apply font-inter bg-stone-100 text-stone-700 antialiased;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply transition-all duration-300 border-b-2 border-transparent;
+  }
+  
+  .nav-link.active, .nav-link:hover {
+    @apply border-elf-pink text-stone-900;
+  }
+  
+  .chart-container {
+    @apply relative w-full max-w-2xl mx-auto h-80 max-h-96;
+  }
+  
+  @media (min-width: 768px) {
+    .chart-container {
+      @apply h-96;
+    }
+  }
+  
+  .stone-card {
+    @apply bg-stone-50 border border-stone-200 transition-all duration-300;
+  }
+  
+  .metric-card:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+  
+  .metric-value {
+    @apply text-elf-pink;
+  }
+  
+  .word-cloud-tag.active {
+    @apply bg-elf-pink text-white shadow-lg;
+  }
+  
+  .recommendation-toggle .icon {
+    @apply transition-transform duration-300;
+  }
+  
+  .recommendation-toggle.open .icon {
+    @apply rotate-45;
+  }
+  
+  .active-btn {
+    @apply bg-stone-300 font-semibold;
+  }
+}
