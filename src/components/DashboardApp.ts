@@ -1,4 +1,4 @@
-import { Chart, ChartConfiguration } from 'chart.js'
+import { Chart } from 'chart.js'
 import { brandData, competitiveData, consumerData, opportunities } from '../data/dashboardData'
 
 export class DashboardApp {
