@@ -20,7 +20,7 @@ A comprehensive, interactive dashboard showcasing strategic insights and competi
 
 ## 🚀 Live Demo
 
-[View Live Dashboard](https://your-username.github.io/elf-cosmetics-dashboard)
+[View Live Dashboard](https://elf-cosmetics-dashboard.vercel.app/)
 
 ## 🛠 Technical Stack
 
